@@ -11,6 +11,7 @@
   - [Installation de Zigbee & du 1er capteur](#installation-de-zigbee--du-1er-capteur)
   - [Persistence et visualisation des données](#persistence-et-visualisation-des-données)
   - [Installation de la téléinfo via WiFi (prochain projet)](#installation-de-la-téléinfo-via-wifi-prochain-projet)
+  - [Home Assistant dans Github](#home-assistant-dans-github)
   - [Allumage plafonnier auto via capteurs de présence (En attente de livraison)](#allumage-plafonnier-auto-via-capteurs-de-présence-en-attente-de-livraison)
   - [Récupération de température via 1-Wire / WiFi (prochain projet)](#récupération-de-température-via-1-wire--wifi-prochain-projet)
 
@@ -45,6 +46,10 @@ Quelques soucis de mise à jour du graphique côté Home Assistant restent à ê
 ### Installation de la téléinfo via WiFi (prochain projet)
 
 Vous pouvez voir le détail de l'intégration du capteur ESP32/téléinfo sur ce tuto [Installation de la téléinfo via WiFi](docs/integ-teleinfo.md).
+
+### Home Assistant dans Github
+
+Vous pouvez voir le détail de l'installation des sauvegardes de Home Assistant dans Github dans ce tuto [Home Assistant sur Github](docs/install-github.md)
 
 ### Allumage plafonnier auto via capteurs de présence (En attente de livraison)
 
