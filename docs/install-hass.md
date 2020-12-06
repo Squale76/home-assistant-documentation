@@ -64,10 +64,12 @@ J'ai décompressé ce fichier zip pour avoir un fichier `.img` qui sera utilisé
 J'ai récupéré le logiciel [balenaEtcher](https://github.com/balena-io/etcher/releases/download/v1.5.112/balenaEtcher-Portable-1.5.112.exe) en version portable pour Windows. Si vous souhaitez une autre version, vous la trouverez sur le site officielle de [balenaEtcher](https://www.balena.io/etcher/)
 
 1. J'ai lancé le logiciel balenaEtcher
-![logiciel balenaEtcher](resources/install-hass_balenaEtcher.png)
-1. Dans *Flash from file*, j'ai sélectionné mon image téléchargée (après l’avoir décompressé)
-1. Dans *Select target*, j'ai sélectionné le support sur lequel je voulais l’installer. A ce stade, j'ai choisi ma microSD.
-1. Puis j'ai cliqué sur *Flash!*.
+
+   ![logiciel balenaEtcher](resources/install-hass_balenaEtcher.png)
+
+2. Dans *Flash from file*, j'ai sélectionné mon image téléchargée (après l’avoir décompressé)
+3. Dans *Select target*, j'ai sélectionné le support sur lequel je voulais l’installer. A ce stade, j'ai choisi ma microSD.
+4. Puis j'ai cliqué sur *Flash!*.
 
 Une fois le flashage terminé, j'ai créé un fichier vide nommé `ssh` (**sans extension**) à la racine de la **partition boot** de ma microSD.
 
@@ -119,7 +121,13 @@ Voilà mon RPi est à jour
 
 ### Changer la version du BootLoader
 
-> /!\ en cours de rédaction
+Pour changer la version du Bootloader, j'ai édité le fichier rpi-eeprom-update via cette commande :
+
+```shell
+sudo nano /etc/default/rpi-eeprom-update
+```
+
+Il faut remplacer `critical` par `stable`, ensuite un petit `CRTL` + `O` pour sauver le fichier et `CTRL` + `X` pour sortir de nano.
 
 ### Mettre a jour vers la dernière version du bootloader
 
