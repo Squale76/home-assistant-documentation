@@ -12,6 +12,7 @@ Cette page liste tous les matériels achetés, en commande ou en cours de recher
 ## Matériel installé
 
 | Description | Prix à l'achat | Acheté le |
+| --- | :-: | :-: |
 | [RPi 4 modèle B 4 Go](https://www.amazon.fr/gp/product/B07TC2BK1X/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) | 62,50€ | 11/2020 |
 | [Boîtier LABISTS pour RPi 4](https://www.amazon.fr/gp/product/B086LCKR4J/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) | 16,99€ | 11/2020 |
 | [SDD 120 Go Sata PNY](https://www.amazon.fr/gp/product/B01KFLH1WS/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1) | 19,99€ | 11/2020 |
@@ -24,6 +25,7 @@ Cette page liste tous les matériels achetés, en commande ou en cours de recher
 ## Matériel commandé
 
 | Description | Prix à l'achat | Acheté le |
+| --- | :-: | :-: |
 | [FTDI USB](https://fr.aliexpress.com/item/32650148276.html?spm=a2g0s.9042311.0.0.35306c37TVObs1) | 2,26€ | 12/2020 |
 | [Câbles dupont](https://fr.aliexpress.com/item/4000894671640.html?spm=a2g0s.9042311.0.0.35306c37TVObs1) | 1,50€ | 12/2020 |
 | [Capteur présence Aquara](https://fr.aliexpress.com/item/4001144052993.html?spm=a2g0s.9042311.0.0.35306c37TVObs1) | 10,55€ | 12/2020 |
@@ -37,8 +39,12 @@ Cette page liste tous les matériels achetés, en commande ou en cours de recher
 ## Mes recherches
 
 | Description | Prix trouvé | vu le |
+| --- | :-: | :-: |
 | []() | ..,..€ | ../.... |
 
 ## Suivi des modifications
 
-*05/12* : 
+- *04/12/20* : Mise à jour de la réception des ESP32
+- *28/11/20* : Réception du matériel (RPi, boitier, SSD, clé Zigbee CC2531, capteur Aquara T/H)
+- *16/11/20* : Commande du matériel (RPi, boitier, SSD, clé Zigbee CC2531, capteur Aquara T/H)
+- *16/11/20* : Initialisation de la liste
