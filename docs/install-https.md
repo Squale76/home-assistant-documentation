@@ -15,14 +15,10 @@
 
 ## Ce qui n'a pas fonctionné
 
-<details><summary>Marche pas pour moi avec Home Assistant Android ...</summary>
-<p>
 J'ai suivi ce tuto [Accès de l’extérieur en HTTPS avec un NDD Freebox et Let’s Encrypt](https://hacf.fr/acceder-a-home-assistant-depuis-un-nom-de-domaine-freebox-fr/).
 
 Tout a bien fonctionné en HTTPS via mes navigateurs (PC et smartphone) et l'utilisation d'une adresse IP interne. Mais pour [Home Assistant Android](https://play.google.com/store/apps/details?id=io.homeassistant.companion.android&hl=fr), cette configuration ne lui convient pas.
 Une solution que l'on m'a proposée a été de passer par un reverse proxy Nginx que j'ai testé via l'addon [NGINX Home Assistant SSL proxy](https://github.com/home-assistant/addons/tree/master/nginx_proxy) avec quelques soucis.
-</p>
-</details>
 
 Bref, vous pouvez suivre mes déboires sur ce fil de [discussion](https://forum.hacf.fr/t/acces-https-et-http/1201)...
 
