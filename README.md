@@ -14,6 +14,8 @@
   - [Home Assistant dans Github](#home-assistant-dans-github)
   - [Allumage plafonnier auto via capteurs de présence (En attente de livraison)](#allumage-plafonnier-auto-via-capteurs-de-présence-en-attente-de-livraison)
   - [Récupération de température via 1-Wire / WiFi (prochain projet)](#récupération-de-température-via-1-wire--wifi-prochain-projet)
+- [Quelques Aides](#quelques-aides)
+  - [Github pour les nuls](#github-pour-les-nuls)
 
 ## Mon matériel
 
@@ -58,3 +60,9 @@ Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Allumage
 ### Récupération de température via 1-Wire / WiFi (prochain projet)
 
 Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Récupération de température via 1-Wire / WiFi](docs/integ-1wire.md).
+
+## Quelques Aides
+
+### Github pour les nuls
+
+[L'aide mémoire de github](docs/github.md)
