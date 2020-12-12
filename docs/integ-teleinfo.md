@@ -5,6 +5,9 @@
 - [Recherches](#recherches)
 - [ESPHome et flashage ESP32](#esphome-et-flashage-esp32)
 - [Réalisation du shield](#réalisation-du-shield)
+  - [Sur Fritzing](#sur-fritzing)
+  - [Sur breadboard](#sur-breadboard)
+  - [sur PCB](#sur-pcb)
 - [Configuration pour la téléinfo](#configuration-pour-la-téléinfo)
   - [Flashage de mon ESP32](#flashage-de-mon-esp32)
   - [Intégration dans une carte Lovelace](#intégration-dans-une-carte-lovelace)
@@ -35,7 +38,19 @@ Suite à la réception de mes ESP32, j'ai flashé mon 1er en suivant ce tuto [In
 
 ## Réalisation du shield
 
+### Sur Fritzing
 
+![Montage sur breadboard](resources/integ-teleinfo_fritzing.png)
+
+### Sur breadboard
+
+![Montage sur breadboard](resources/integ-teleinfo_breadboard.png)
+
+J'vous l'accorde, ça fait un peu plat de nouilles que sur le schéma ...
+
+### sur PCB
+
+> En attente de livraison ...
 
 ## Configuration pour la téléinfo
 
@@ -111,11 +126,16 @@ Et voilà, un suivi de la puissance utilisée.
 ## Reste à faire
 
 - Modifier la fréquence de mise à jour de la courbe de suivi de la puissance (pas assez réactive à mon goût).
-- Vérifier pourquoi l'index passe à zéro sur le graphique.
+- Vérifier pourquoi l'index passe à zéro sur le graphique. apparemment le checksum n'est pas fait sur les groupes d'informations de la trame Téléinfo. J'ai donc 3 solutions pour y remédier :
+  - Me mettre au C pour comprendre et modifier le code de `my_tic_component.h`. Pas enchanté, vue mes compétences en C...
+  - Un nouveau composant `teleinfo` est en développement sur ESPHome mais son utilisation nécessite l'[installation de l'environnement de DEV d'ESPHome](https://forum.hacf.fr/t/teleinfo-via-wifi/1077/55). C'est un peu chaud ...
+  - Attendre que ce composant sorte officiellement ...
+
 - Sauvegarder les informations dans InfluDB pour avoir un meilleur historique.
 - Afficher via Grafana un plus joli graphique.
 
 ## Suivi des modifications
 
+*12/12/2020* : Ajout des images du montage de tests
 *07/12/2020* : Intégrations du code de suivi de la téléinfo
 *04/12/2020* : Flashage de l'ESP32 pour OTA via WiFi
