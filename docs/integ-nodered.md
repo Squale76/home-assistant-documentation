@@ -37,11 +37,11 @@ Dans Node-RED, faites un drag&drop d'un noeud `events: state` dans votre `Flow`.
 
 Double cliquez sur ce noeud, dans la fenêtre qui vient de s'ouvrir, il faudra configurer ce que nous allons surveiller.
 
-![event state node config](resources/integ-nodered_event-state-node.png | width=100)
+![event state node config](resources/integ-nodered_event-state-node.png)
 
-![delay node config](resources/integ-nodered_delay-node.png | width=100)
+![delay node config](resources/integ-nodered_delay-node.png)
 
-![service node config](resources/integ-nodered_service-node.png | width=100)
+![service node config](resources/integ-nodered_service-node.png)
 
 ## Suivi des modifications
 
