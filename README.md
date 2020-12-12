@@ -11,6 +11,7 @@
   - [Installation de Zigbee & du 1er capteur](#installation-de-zigbee--du-1er-capteur)
   - [Persistence et visualisation des données](#persistence-et-visualisation-des-données)
   - [Installation de la téléinfo via WiFi (prochain projet)](#installation-de-la-téléinfo-via-wifi-prochain-projet)
+  - [Première notifications sur HA Android via Node-RED](#première-notifications-sur-ha-android-via-node-red)
   - [Home Assistant dans Github](#home-assistant-dans-github)
   - [Allumage plafonnier auto via capteurs de présence (En attente de livraison)](#allumage-plafonnier-auto-via-capteurs-de-présence-en-attente-de-livraison)
   - [Récupération de température via 1-Wire / WiFi (prochain projet)](#récupération-de-température-via-1-wire--wifi-prochain-projet)
@@ -48,6 +49,10 @@ Quelques soucis de mise à jour du graphique côté Home Assistant restent à ê
 ### Installation de la téléinfo via WiFi (prochain projet)
 
 Vous pouvez voir le détail de l'intégration du capteur ESP32/téléinfo sur ce tuto [Installation de la téléinfo via WiFi](docs/integ-teleinfo.md).
+
+### Première notifications sur HA Android via Node-RED
+
+Vous pouvez voir le détail de l'installation de Node-RED et le premier flow concernant une notification lorsqu'une seuil de batterie est atteint dans ce tuto [Notifications sur HA Android via Node-RED](docs/integ-nodered.md).
 
 ### Home Assistant dans Github
 
