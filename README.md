@@ -12,9 +12,12 @@
   - [Persistence et visualisation des données](#persistence-et-visualisation-des-données)
   - [Installation de la téléinfo via WiFi (prochain projet)](#installation-de-la-téléinfo-via-wifi-prochain-projet)
   - [Première notifications sur HA Android via Node-RED](#première-notifications-sur-ha-android-via-node-red)
+  - [Installation de Lovelace Mini Graph Card](#installation-de-lovelace-mini-graph-card)
   - [Home Assistant dans Github](#home-assistant-dans-github)
   - [Allumage plafonnier auto via capteurs de présence (En attente de livraison)](#allumage-plafonnier-auto-via-capteurs-de-présence-en-attente-de-livraison)
   - [Récupération de température via 1-Wire / WiFi (prochain projet)](#récupération-de-température-via-1-wire--wifi-prochain-projet)
+  - [Installation de Grocy / HA Android](#installation-de-grocy--ha-android)
+  - [Réseau d'Assistants vocaux](#réseau-dassistants-vocaux)
 - [Quelques Aides](#quelques-aides)
   - [Github pour les nuls](#github-pour-les-nuls)
 
@@ -54,6 +57,10 @@ Vous pouvez voir le détail de l'intégration du capteur ESP32/téléinfo sur ce
 
 Vous pouvez voir le détail de l'installation de Node-RED et le premier flow concernant une notification lorsqu'une seuil de batterie est atteint dans ce tuto [Notifications sur HA Android via Node-RED](docs/integ-nodered.md).
 
+### Installation de Lovelace Mini Graph Card
+
+Vous pouvez voir le détail de l'installation sur ce tuto [Lovelace Mini Graph Card](docs/install-lovelace-minigraph.md).
+
 ### Home Assistant dans Github
 
 Vous pouvez voir le détail de l'installation des sauvegardes de Home Assistant dans Github dans ce tuto [Home Assistant sur Github](docs/install-github.md)
@@ -65,6 +72,12 @@ Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Allumage
 ### Récupération de température via 1-Wire / WiFi (prochain projet)
 
 Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Récupération de température via 1-Wire / WiFi](docs/integ-1wire.md).
+
+### Installation de Grocy / HA Android
+
+### Réseau d'Assistants vocaux
+
+Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Réseaux d'assistants vocaux](docs/integ-rhasspy.md).
 
 ## Quelques Aides
 
