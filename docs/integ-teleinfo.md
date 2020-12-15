@@ -322,9 +322,7 @@ Et voilà, un suivi de la puissance utilisée.
 
 ### Intégration dans une carte Mini Graph Card
 
-Sous HACS, j'ai cliqué sur l'onglet `Frontend`, puis `EXPLORE & ADD REPOSITORIES` pour ajouter le repository de `Mini Graph Card`.
-
-Une recherche sur `Mini Graph ...` filtre les repository. J'ai cliqué dans la liste sur `Mini Graph Card` puis sur `INSTALL THIS REPOSITORY IN HACS` en bas à droite.
+Il faut d'abord avoir installé HACS et le plugin Mini Graph Card comme sur le tuto [Lovelace Mini Graph Card](install-lovelace-minigraph.md)
 
 Ensuite sur le dashboard sur lequel je voulais ajouter un graphique, j'ai cliqué en haut à droite sur les 3 points, puis `Modifier le tableau de bord`
 
