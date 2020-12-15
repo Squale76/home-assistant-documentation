@@ -11,6 +11,8 @@
 - [Configuration pour la téléinfo](#configuration-pour-la-téléinfo)
   - [Flashage de mon ESP32](#flashage-de-mon-esp32)
   - [Intégration dans une carte Lovelace](#intégration-dans-une-carte-lovelace)
+  - [Intégration dans une carte Mini Graph Card](#intégration-dans-une-carte-mini-graph-card)
+  - [Ajout de Utility Meter](#ajout-de-utility-meter)
 - [Reste à faire](#reste-à-faire)
 - [Suivi des modifications](#suivi-des-modifications)
 
@@ -22,7 +24,7 @@ En préparation sur ce fil de [discussion](https://forum.hacf.fr/t/teleinfo-via-
 
 Suite à la réception de mes ESP32, j'ai flashé mon 1er en suivant ce tuto [Installer ESPHome sur Home Assistant et créer votre première configuration](https://forum.hacf.fr/t/installer-esphome-sur-home-assistant-et-creer-votre-premiere-configuration/223)
 
-[u]Quelques remarques :[/u]
+<u>Quelques remarques :</u>
 
 - Mon ESP32 n'était effectivement pas reconnu sous Win10, il a fallu installé les drivers qui se trouvent sur le site de [silabs.com](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers)
 - Après le flashage, dans ESPHome, j'ai vu dans les logs de mon nouveau device :
@@ -172,10 +174,10 @@ logger:
 
 # Enable Home Assistant API
 api:
-  password: "5pEVr4MR"
+  password: !secret ota_pass
 
 ota:
-  password: "5pEVr4MR"
+  password: !secret ota_pass
 
 # ajout du composant uart pour la communication série avec la sortie TIC du compteur
 # GPIO3 = Pin Rx sur ESP32-WROOM-32D
@@ -318,6 +320,85 @@ Clique sur `AJOUTER UNE ACTION`, j'ai choisi la carte `Capteur` et dans `Entité
 
 Et voilà, un suivi de la puissance utilisée.
 
+### Intégration dans une carte Mini Graph Card
+
+Sous HACS, j'ai cliqué sur l'onglet `Frontend`, puis `EXPLORE & ADD REPOSITORIES` pour ajouter le repository de `Mini Graph Card`.
+
+Une recherche sur `Mini Graph ...` filtre les repository. J'ai cliqué dans la liste sur `Mini Graph Card` puis sur `INSTALL THIS REPOSITORY IN HACS` en bas à droite.
+
+Ensuite sur le dashboard sur lequel je voulais ajouter un graphique, j'ai cliqué en haut à droite sur les 3 points, puis `Modifier le tableau de bord`
+
+Pour ajouter la carte, un clic sur `AJOUTER UNE CARTE` et tout en bas de la liste, je clique sur `Manuel`. Cette carte me permettra d'ajouter le code directement.
+
+Dans la nouvelle fenêtre, je colle le code suivant :
+
+```yaml
+align_icon: left
+color_thresholds:
+  - color: '#11f13a'
+    value: 600
+  - color: '#11f13a'
+    value: 800
+  - color: '#f0da11'
+    value: 1000
+  - color: '#ef5a0f'
+    value: 3000
+  - color: '#ef1d0f'
+    value: 5000
+entities:
+  - sensor.puissance
+hours_to_show: 24
+hour24: true
+more_info: false
+name: Conso EDF
+points_per_hour: 2
+animate: true
+show:
+  labels: true
+  name: true
+type: 'custom:mini-graph-card'
+```
+
+Et volià, une belle courbe qui change de couleur en fonction des 
+
+### Ajout de Utility Meter
+
+Pour obtenir des aggrégation de données, je vais utiliser `utility_meter` de Home Assistant.
+
+Son utilisation est très simple. J'ai choisi de séparer tout ce qui concerne Utility Meter dans un fichier de configuration à part, donc j'ai créé via le `File Editor`, un fichier `utility.yaml`.
+
+Dans ce fichier `utility.yaml`, j'ai ajouté ce code :
+
+```yaml
+# Téléinfo
+  consommation_heure:
+    source: sensor.puissance
+    cycle: hourly
+```
+
+> **ATTENTION** à l'indentation
+
+Ce code me permettra d'avoir accès à un sensor qui se nommera `sensor.consommation_heure`.
+
+Pour que ce fichier `utility.yaml` soit accessible, il faut ajouter une inclusion dans le fichier `configuration.yaml` :
+
+```yaml
+# utility_meter
+utility_meter: !include utility.yaml
+```
+
+Un passage obligé de validation, dans le menu, je clique sur `Configuration` puis `Contrôle du serveur` puis sur le bouton `VERIFIER LA CONFIGURATION`. C'est validé.
+
+Un clic sur `REDEMARRER` dans la `Gestion du serveur`.
+
+Voilà un nouveau sensor est accessible qui vous donnera les consommations aggréger sur une heure. Vous pouvez avoir plusieurs aggrégation :
+
+- par heure : `hourly`
+- par jour : `daily`
+- par semaine : `weekly`
+- par mois : `monthly`
+- par an : `yearly`
+
 ## Reste à faire
 
 - ~~Modifier la fréquence de mise à jour de la courbe de suivi de la puissance (pas assez réactive à mon goût).~~
@@ -331,6 +412,7 @@ Et voilà, un suivi de la puissance utilisée.
 
 ## Suivi des modifications
 
+*15/12/2020* : Ajout du plugin Mini Graph Card
 *13/12/2020* : Ajout du composant teleinfo de dev
 *12/12/2020* : Ajout des images du montage de tests
 *07/12/2020* : Intégrations du code de suivi de la téléinfo
