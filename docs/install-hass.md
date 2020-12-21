@@ -55,7 +55,8 @@ L'installation de Raspberry Pi OS sur une microSD va nous permettre de modifier 
 
 ### Préparer la carte MicroSD
 
-J'ai récupéré la dernière image lite de **Raspberry Pi OS** [2020-08-20-raspios-buster-armhf-lite](https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2020-12-04/2020-08-20-raspios-buster-armhf-lite.zip) de l'époque de mon installation.
+Suite à une réinstalltion, j'en ai profité pour migrer en 64bits.
+J'ai récupéré la dernière image lite de **Raspberry Pi OS 64 bits** ~~ [2020-08-20-raspios-buster-armhf-lite](https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2020-12-04/2020-08-20-raspios-buster-armhf-lite.zip)~~ [2020-08-20-raspios-buster-arm64-lite](https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2020-08-24/2020-08-20-raspios-buster-arm64-lite.zip) de l'époque de mon installation.
 
 Vous pouvez récupérer la dernière image via le site officiel [Raspberry Pi OS](https://www.raspberrypi.org/software/operating-systems/)
 
@@ -179,13 +180,25 @@ En appuyant sur `TAB`, j'ai déplacé mon curseur sur `OK` et appuyer sur `ENTRE
 
 Une nouvelle fenêtre s'esta affiché pour choisir la langue par défaut. Pas bête, j'ai choisi `fr_FR.UTF-8 UTF-8` puis à nouveau `OK`
 
+puis j'ai selectionné `5 Localisation Options`
+
+![configuration localisation options](resources/install-hass_config-localisation.png)
+
+et `L2 Timezone`
+
+![configuration time zone](resources/install-hass_config-timezone.png)
+
+`Europe` > `Paris`
+
 ### Changer le Password
 
 > /!\ en cours de rédaction
 
 ### Etendre la capacité à toute la carte
 
-> /!\ en cours de rédaction
+![configuration Advanced Options](resources/install-hass_config-advanced.png)
+
+puis `A1 Expand Filesystem` > `OK`
 
 ### Mise à jour et installation des dépendances
 
@@ -203,16 +216,35 @@ sudo apt-get install -y software-properties-common apparmor-utils apt-transport-
 
 ### Arrêt du paquet ModemManager
 
-> /!\ en cours de rédaction
+```shell
+sudo systemctl disable ModemManager
+sudo systemctl stop ModemManager
+```
 
 ### Installation de Docker
 
-> /!\ en cours de rédaction
+Taper les commandes suivantes qui permettent d’installer Docker, de l’ajouter au démarrage et d’ajouter l’utilisateur pi au group docker.
+
+```shell
+curl -fsSL http://get.docker.com/ -o get-docker.sh && sh get-docker.sh
+```
+
+```shell
+sudo usermod -aG docker pi
+sudo systemctl enable docker
+sudo systemctl start docker
+```
 
 ### Installation de Home Assistant su Docker
 
-> /!\ en cours de rédaction
+Cette ligne de commande installe Home Assistant en version 64 bits.
+
+```shell
+curl -sL "https://raw.githubusercontent.com/McFlyPartages/supervised-installer/master/installer.sh" >> hassio_install.sh
+sudo bash hassio_install.sh
+```
 
 ## Suivi des modifications
 
+*19/12/2020* : Mise à jour sur à réinstallation
 *21/11/2020* : Installation de Home Assistant

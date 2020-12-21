@@ -17,6 +17,7 @@
   - [Allumage plafonnier auto via capteurs de présence (En attente de livraison)](#allumage-plafonnier-auto-via-capteurs-de-présence-en-attente-de-livraison)
   - [Récupération de température via 1-Wire / WiFi (prochain projet)](#récupération-de-température-via-1-wire--wifi-prochain-projet)
   - [Installation de Grocy / HA Android](#installation-de-grocy--ha-android)
+  - [Pluviomètre](#pluviomètre)
   - [Réseau d'Assistants vocaux](#réseau-dassistants-vocaux)
 - [Quelques Aides](#quelques-aides)
   - [Github pour les nuls](#github-pour-les-nuls)
@@ -39,7 +40,7 @@ Mon Home Assistant est désormais accessible depuis une URL en *https://...*
 
 ### Installation de Zigbee & du 1er capteur
 
-Vous pouvez voir le détail de l'installation de mon 1er capteur Zigbee Aquara sur ce tuto [Installation de capteur Zigbee](docs/install-zigbee.md).
+Vous pouvez voir le détail de l'installation de mon 1er capteur Zigbee Aquara sur ce tuto [Installation de Zigbee](docs/install-zigbee.md).
 
 Suite à cette installation, mon capteur Aquara était visible sans aucun problème.
 
@@ -74,6 +75,10 @@ Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Allumage
 Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Récupération de température via 1-Wire / WiFi](docs/integ-1wire.md).
 
 ### Installation de Grocy / HA Android
+
+### Pluviomètre
+
+[DIY Zigbee rain gauge](https://community.home-assistant.io/t/diy-zigbee-rain-gauge/255379)
 
 ### Réseau d'Assistants vocaux
 

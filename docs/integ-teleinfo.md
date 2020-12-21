@@ -111,6 +111,12 @@ Clique sur `SAVE`, puis `CLOSE`, clique sur `VALIDATE` pour vérifier la validit
 
 </details><br>
 
+Installer l'add-on ESPHome
+
+Dans le menu latéral de Home Asistant, un clic sur `Supervisor`, puis l'onglet `Add-on Store`. Je choisi `ESPHome` puis un clic sur `INSTALL`.
+
+on clique sur `START`. On attend .......
+
 Suite à une discussion sur le forum [HACF](https://forum.hacf.fr) sur la [Téléinfo via wifi](https://forum.hacf.fr/t/teleinfo-via-wifi/1077), j'ai suivi [l'expérience](https://forum.hacf.fr/t/teleinfo-via-wifi/1077/78) de @Jcpas qui avait installé le composant téléinfo encore en développement de ESPHome.
 
 > Avant toutes choses, on `STOP` l'add-on `ESPHome`via le `Supervisor`. Ceci pour éviter tout conflit avec la version de dev.
@@ -118,10 +124,23 @@ Suite à une discussion sur le forum [HACF](https://forum.hacf.fr) sur la [Tél�
 L'installation des composants ESPhome en version de développement passe par l'installation de l'add-on ESPHome version dev. Pour avoir accès à la version de dev d'ESPHome, il faut ajouter un repository à l'`Add-on Store` du `Supervisor`. Dans le menu latéral de Home Asistant, un clic sur `Supervisor`, puis l'onglet `Add-on Store`, l'ajout se fait via les 3 petits points en haut à droite. Dans la nouvelle fenêtre `Manage add-on repositories`, j'ai collé l'URL suivante puis cliqué sur `ADD` et `CLOSE` :
 
 ```url
-https://github.com/esphome.hassio
+https://github.com/esphome/hassio
 ```
 
-Ensuite dans le bloc `ESPHome Home Assistant Add-ons`, on a accès à `ESPHome (dev)`. On clique dessus pour accéder à cet add-on, puis sur `INSTALL`. Après quelques minutes, `ESPHome (dev)` est installé. Avant de démarré `ESPHome (dev)`, n'oubliez pas de stopper `ESPHome` pour éviter tout conflit, si c'est fait, on clique sur `START`. On attend .......
+Ensuite dans le bloc `ESPHome Home Assistant Add-ons`, on a accès à `ESPHome (dev)`. On clique dessus pour accéder à cet add-on, puis sur `INSTALL`. Après quelques minutes, `ESPHome (dev)` est installé.
+
+Avant de démarré `ESPHome (dev)` :
+
+1. n'oubliez pas de stopper `ESPHome` pour éviter tout conflit,
+2. fixez la version de ESPHome (dev) via l'onglet `Configuraiton` :
+
+   ```yaml
+   esphome_version: 765e641d
+   ```
+
+si c'est fait, on clique sur `START`. On attend .......
+
+> Si vous avez choisi de fixer la version, **ne pas activer l'auto update**.
 
 Un fois `ESPHome (dev)` démarré (*on vérifie les logs pendant son lancement pour vérifier que tout c'est bien passé*), j'ajoute un nouveau composant via le gros `+` vert en bas à droite, puis je renseigne comme suit :
 
@@ -154,9 +173,9 @@ wifi:
 
   # Optional manual IP
   manual_ip:
-    static_ip: <IP de l'ESP32>
-    gateway: <IP de ma gateway>
-    subnet: <masque de sous réseau>
+    static_ip: !secret ip_teleinfo
+    gateway: !secret ip_gateway
+    subnet: !secret ip_subnet
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
@@ -222,6 +241,11 @@ sensor:
         icon: mdi:home-analytics
         filters:
           - multiply: 0.001
+     - tag_name: "BASE"
+       sensor:
+        name: "Index (Wh)"
+        unit_of_measurement: "Wh"
+        icon: mdi:home-analytics
      - tag_name: "ISOUSC"
        sensor:
         name: "Intensité souscrite"
@@ -276,6 +300,7 @@ text_sensor:
         return { (String(seconds) +"s").c_str() };
       }
 ```
+
 </p>
 </details><br>
 
@@ -333,27 +358,56 @@ Dans la nouvelle fenêtre, je colle le code suivant :
 ```yaml
 align_icon: left
 color_thresholds:
-  - color: '#11f13a'
-    value: 600
-  - color: '#11f13a'
-    value: 800
-  - color: '#f0da11'
-    value: 1000
-  - color: '#ef5a0f'
-    value: 3000
-  - color: '#ef1d0f'
-    value: 5000
+  - color: '#11f13a'     # Couleur verte affichée pour toutes valeurs inférieures à 23
+    value: 23
+  - color: '#f0da11'     # Couleur jaune affichée pour toutes valeurs entre 23 et 24
+    value: 24
+  - color: '#ef5a0f'     # Couleur orange affichée pour toutes valeurs entre 24 et 25
+    value: 25
+  - color: '#ef1d0f'     # Couleur rouge affichée pour toutes valeurs supérieure à 25
+    value: 26
 entities:
-  - sensor.puissance
-hours_to_show: 24
+  - sensor.index_wh      # On prend le sensor d'origine en Wh
+unit: Wh                      # On met l'unité en Wh
+aggregate_func: delta     # On choisit la fonction d'agrégation delta pour récupérer la différence entre 2 valeurs
+hours_to_show: 1        # On affiche les valeurs que sur 1 heure
 hour24: true
 more_info: false
-name: Conso EDF
-points_per_hour: 2
+name: Conso EDF par heure
+points_per_hour: 60     # On choisi 1 point par minute, on aura donc 60 points d'afficher puisqu'on affiche qu'une heure
+animate: true  # L'animation de la courbe au chargement
+show:
+  labels: true    # On affiche les pastille max et min de la courbe
+  name: true    # On affiche le titre
+  state: false    # On masque la valeur courante (voir explications)
+type: 'custom:mini-graph-card'
+```
+
+```yaml
+align_icon: left
+color_thresholds:
+  - color: '#11f13a'
+    value: 23
+  - color: '#f0da11'
+    value: 24
+  - color: '#ef5a0f'
+    value: 25
+  - color: '#ef1d0f'
+    value: 26
+entities:
+  - sensor.index_wh
+unit: Wh
+aggregate_func: delta
+hours_to_show: 1
+hour24: true
+more_info: false
+name: Conso EDF par heure
+points_per_hour: 60
 animate: true
 show:
   labels: true
   name: true
+  state: false
 type: 'custom:mini-graph-card'
 ```
 

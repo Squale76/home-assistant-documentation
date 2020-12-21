@@ -9,7 +9,7 @@
 
 ## Pré requis
 
-Avoir installé HACS qui permet d'utiliser des développement de la communauté HA
+Avoir installé HACS qui permet d'utiliser des développement de la communauté HA, voir le tuto [Installation de HACS](install-hacs.md)
 
 ## Installation du plugin
 

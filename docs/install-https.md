@@ -69,18 +69,19 @@ en suivant ce [tuto](https://github.com/hassio-addons/addon-nginx-proxy-manager/
 - Il vous sera demandé de renseigner le compte Admin puis un nouveau mot de passe.
 - Dans l'UI de **Nginx Proxy Manager**, cliquez sur `Hosts` puis `Proxy Hosts` puis sur `Add Proxy Host`.
 - Dans la nouvelle fenêtre :
-  - Domaine Names : le nom de domaine que vous avez (voir DuckDNS pour en obtenir un)
+  - Domaine Names : le nom de domaine que vous avez (voir DuckDNS pour en obtenir un), ne pas oubliez de cliquer sur `add xxx ...`
   - Scheme : http
   - Forward Hostname / IP : l'IP de votre hôte Home Assistant (voir **URL Interne**)
   - Forward Port : 8123
   - Websockets Support : coché
 - Cliquez sur `SAVE`
-- Testez si vous pouvez accéder à votre Home Assistant via votre nom de domaine en HTTP.
+- Testez si vous pouvez accéder à votre Home Assistant via votre nom de domaine en HTTP en cliquant sur le nom de votre domaine dans la colonne source.
 - Si c'est possible, passez votre Home Assistant en HTTPS en cliquant sur les 3 petit point à droite de votre `Source`.
-- Cliquez sur `Edit`, puis sur l'onglet `SSL`, choisissez `Request a new SSL Certificat` cochez `Force SSL`, activez `I Agree ...` puis `Save`. Let's Encrypt va vous fournir un certificat sur votre Home Assistant.
+- Cliquez sur `Edit`, puis sur l'onglet `SSL`, choisissez `Request a new SSL Certificat` dans `SSL Certificate` puis cochez `Force SSL`, activez `I Agree ...` puis `Save`. Let's Encrypt va vous fournir un certificat sur votre Home Assistant.
 
 Vous pouvez désormais accéder à votre Home Assistant via `https://<votre nom de domaine>` et ce depuis vos navigateurs comme sur **Home Assistant Android** (en modifiant l'URL dans `Configuration de l'application`, `URL de Home Assistant`).
 
 ## Suivi des modifications
 
-*05/12* : 1ère installation avec HTTPS fonctionnel sur **navigateur** et **HA Android**
+*21/12/2020* : Ajout de précision
+*05/12/2020* : 1ère installation avec HTTPS fonctionnel sur **navigateur** et **HA Android**
