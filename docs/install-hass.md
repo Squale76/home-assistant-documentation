@@ -22,7 +22,7 @@
   - [Mise à jour et installation des dépendances](#mise-à-jour-et-installation-des-dépendances)
   - [Arrêt du paquet ModemManager](#arrêt-du-paquet-modemmanager)
   - [Installation de Docker](#installation-de-docker)
-  - [Installation de Home Assistant su Docker](#installation-de-home-assistant-su-docker)
+  - [Installation de Home Assistant sur Docker](#installation-de-home-assistant-sur-docker)
 - [Suivi des modifications](#suivi-des-modifications)
 
 ## Pré-requis
@@ -235,7 +235,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-### Installation de Home Assistant su Docker
+### Installation de Home Assistant sur Docker
 
 Cette ligne de commande installe Home Assistant en version 64 bits.
 
