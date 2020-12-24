@@ -10,7 +10,7 @@
   - [Passage en HTTPS](#passage-en-https)
   - [Installation de Zigbee & du 1er capteur](#installation-de-zigbee--du-1er-capteur)
   - [Persistence et visualisation des données](#persistence-et-visualisation-des-données)
-  - [Installation de la téléinfo via WiFi (prochain projet)](#installation-de-la-téléinfo-via-wifi-prochain-projet)
+  - [Installation de la téléinfo via WiFi](#installation-de-la-téléinfo-via-wifi)
   - [Première notifications sur HA Android via Node-RED](#première-notifications-sur-ha-android-via-node-red)
   - [Installation de Lovelace Mini Graph Card](#installation-de-lovelace-mini-graph-card)
   - [Home Assistant dans Github](#home-assistant-dans-github)
@@ -50,17 +50,25 @@ Vous pouvez voir le détail de l'installation de la persistence et l'affichage d
 
 Quelques soucis de mise à jour du graphique côté Home Assistant restent à être réglés ...
 
-### Installation de la téléinfo via WiFi (prochain projet)
+### Installation de la téléinfo via WiFi
 
 Vous pouvez voir le détail de l'intégration du capteur ESP32/téléinfo sur ce tuto [Installation de la téléinfo via WiFi](docs/integ-teleinfo.md).
+
+Je peux désormais suivre ma consommation EDF.
 
 ### Première notifications sur HA Android via Node-RED
 
 Vous pouvez voir le détail de l'installation de Node-RED et le premier flow concernant une notification lorsqu'une seuil de batterie est atteint dans ce tuto [Notifications sur HA Android via Node-RED](docs/integ-nodered.md).
 
+Pratique pour surveiller la tablette qui fait office de centre de contrôle.
+
 ### Installation de Lovelace Mini Graph Card
 
 Vous pouvez voir le détail de l'installation sur ce tuto [Lovelace Mini Graph Card](docs/install-lovelace-minigraph.md).
+
+De superbes courbes avec une variation de couleur en fonction des valeurs.
+
+![Courbe Mini Graph](docs/resources/mini-graph.png)
 
 ### Home Assistant dans Github
 
