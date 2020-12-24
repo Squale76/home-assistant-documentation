@@ -246,5 +246,5 @@ sudo bash hassio_install.sh
 
 ## Suivi des modifications
 
-*19/12/2020* : Mise à jour sur à réinstallation
-*21/11/2020* : Installation de Home Assistant
+- *19/12/2020* : Mise à jour sur à réinstallation
+- *21/11/2020* : Installation de Home Assistant

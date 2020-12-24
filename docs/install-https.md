@@ -83,5 +83,5 @@ Vous pouvez désormais accéder à votre Home Assistant via `https://<votre nom 
 
 ## Suivi des modifications
 
-*21/12/2020* : Ajout de précision
-*05/12/2020* : 1ère installation avec HTTPS fonctionnel sur **navigateur** et **HA Android**
+- *21/12/2020* : Ajout de précision
+- *05/12/2020* : 1ère installation avec HTTPS fonctionnel sur **navigateur** et **HA Android**
