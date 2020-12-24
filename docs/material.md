@@ -23,6 +23,7 @@ Cette page liste tous les matériels achetés, en commande ou en cours de recher
 | [ESP32-WROOM-32D](https://www.amazon.fr/gp/product/B074RGW2VQ/ref=ppx_yo_dt_b_asin_title_o00_s00?tag=hacf0d-21) | 16.99€ | 12/2020 |
 | [Shelly 1](https://shop.shelly.cloud/shelly-1-wifi-smart-home-automation#50) | 16.75€ | 12/2020 |
 | [Capteur présence Aquara](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F4001144052993.html) | 10,55€ | 12/2020 |
+| [Boitier](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F4000287507400.html) | 3,80€ | 12/2020 |
 
 ## Matériel commandé
 
@@ -32,7 +33,6 @@ Cette page liste tous les matériels achetés, en commande ou en cours de recher
 | [Câbles dupont](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F4000894671640.html) | 1,50€ | 12/2020 |
 | [CC2530 Routeur Zigbee](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F33006721586.html) | 6,55€ | 12/2020 |
 | [Alim 230v - 5v](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F32674295742.html) | 3,15€ | 12/2020 |
-| [Boitier](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F4000287507400.html) | 3,80€ | 12/2020 |
 | [Broche simple rangée](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F1005001418544370.html) | 1,20€ | 12/2020 |
 | [Broche double rangée](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F4000597517515.html) | 1,38€ | 12/2020 |
 | [Plaque prototype](https://s.click.aliexpress.com/deep_link.htm?aff_short_key=_All9bw&dl_target_url=https%3A%2F%2Ffr.aliexpress.com%2Fitem%2F4000817854796.html) | 3,94€ | 12/2020 |
@@ -45,6 +45,7 @@ Cette page liste tous les matériels achetés, en commande ou en cours de recher
 
 ## Suivi des modifications
 
+- *18/12/20* : Mise à jour de la réception du boitier
 - *14/12/20* : Mise à jour de la réception du capteur de mouvement Aquara
 - *10/12/20* : Mise à jour de la réception du shelly 1
 - *04/12/20* : Mise à jour de la réception des ESP32
