@@ -92,4 +92,4 @@ Voilà, votre 1er flow est prêt. Un clic sur le bouton `Deploy` en haut à droi
 
 ## Suivi des modifications
 
-*12/12/2020* : Création de mon 1er flow sous Node-RED
+- *12/12/2020* : Création de mon 1er flow sous Node-RED

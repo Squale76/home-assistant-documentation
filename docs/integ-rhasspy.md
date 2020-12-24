@@ -27,4 +27,4 @@ En gros, il reconnait de quel appareil est fait la demande et diffuse sur cet ap
 
 ## Suivi des modifications
 
-*14/12/2020* : Initialisation du projet
+- *14/12/2020* : Initialisation du projet

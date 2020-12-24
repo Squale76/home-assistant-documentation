@@ -24,5 +24,5 @@ Depuis Github, j'ai créer un repository [home-assistant-configuration](https://
 
 ## Suivi des modifications
 
-*15/12/2020* : initialisation des modifications
-*06/12/2020* : initialisation de la recherche
+- *15/12/2020* : initialisation des modifications
+- *06/12/2020* : initialisation de la recherche

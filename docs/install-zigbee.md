@@ -137,4 +137,4 @@ NOTA : Il ne faut pas supprimer ce qu’il y a avant le . (sensor, binary_sensor
 
 ## Suivi des modifications
 
-*21/12/2020* : Ajout du broker MQTT, de l'utilisateur & de l'intégration
+- *21/12/2020* : Ajout du broker MQTT, de l'utilisateur & de l'intégration

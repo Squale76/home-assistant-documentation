@@ -20,4 +20,4 @@ Quelques soucis de mise à jour du graphique côté Home Assistant restent à ê
 
 ## Suivi des modifications
 
-*00/00* : xxx
+- *00/00* : xxx

@@ -18,4 +18,4 @@ Pour préparer, une automation pour éteindre une lampe 10 minutes après la der
 
 ## Suivi des modifications
 
-*00/00* : xxx
+- *00/00* : xxx

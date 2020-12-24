@@ -464,8 +464,8 @@ Voilà un nouveau sensor est accessible qui vous donnera les consommations aggr�
 
 ## Suivi des modifications
 
-*15/12/2020* : Ajout du plugin Mini Graph Card
-*13/12/2020* : Ajout du composant teleinfo de dev
-*12/12/2020* : Ajout des images du montage de tests
-*07/12/2020* : Intégrations du code de suivi de la téléinfo
-*04/12/2020* : Flashage de l'ESP32 pour OTA via WiFi
+- *15/12/2020* : Ajout du plugin Mini Graph Card
+- *13/12/2020* : Ajout du composant teleinfo de dev
+- *12/12/2020* : Ajout des images du montage de tests
+- *07/12/2020* : Intégrations du code de suivi de la téléinfo
+- *04/12/2020* : Flashage de l'ESP32 pour OTA via WiFi

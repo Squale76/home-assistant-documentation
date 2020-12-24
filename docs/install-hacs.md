@@ -37,8 +37,8 @@ Puis cliquez sur `SOUMETTRE`. J'ai dû redémarrer Home Assistant pour que l'ent
 
 Dans le menu latéral, cliquez sur `HACS`.
 
-
+> En cours de rédaction
 
 ## Suivi des modifications
 
-*20/12/2020* : Initialisation
+- *20/12/2020* : Initialisation

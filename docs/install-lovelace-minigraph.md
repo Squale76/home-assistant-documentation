@@ -29,4 +29,4 @@ Un clic sur `RELOAD` pour recharger le cache du navigateur.
 
 ## Suivi des modifications
 
-*13/12/2020* : Essai d'ajout du plugin
+- *13/12/2020* : Essai d'ajout du plugin
