@@ -17,8 +17,9 @@
   - [Allumage plafonnier auto via capteurs de présence (En attente de livraison)](#allumage-plafonnier-auto-via-capteurs-de-présence-en-attente-de-livraison)
   - [Récupération de température via 1-Wire / WiFi (prochain projet)](#récupération-de-température-via-1-wire--wifi-prochain-projet)
   - [Installation de Grocy / HA Android](#installation-de-grocy--ha-android)
-  - [Pluviomètre](#pluviomètre)
-  - [Réseau d'Assistants vocaux](#réseau-dassistants-vocaux)
+  - [Pluviomètre (futur projet)](#pluviomètre-futur-projet)
+  - [Réseau d'Assistants vocaux (futur projet)](#réseau-dassistants-vocaux-futur-projet)
+  - [Système Ambilight](#système-ambilight)
 - [Quelques Aides](#quelques-aides)
   - [Github pour les nuls](#github-pour-les-nuls)
 
@@ -30,13 +31,12 @@ Vous pouvez voir le détail de mon matériel sur la page [Mon matériel](docs/ma
 
 ### Installation de Home Assistant
 
-Vous pouvez voir le détail de mon installation sur ce tuto [Installation de Home Assistant](docs/install-hass.md).
+Mon tuto [Installation de Home Assistant](docs/install-hass.md).
 
 ### Passage en HTTPS
 
-Vous pouvez voir le détail de mon installation sur ce tuto [Installation du protocole HTTPS](docs/install-https.md).
-
-Mon Home Assistant est désormais accessible depuis une URL en *https://...*
+Pour sécuriser mes accès à ma domotique, j'ai souhaité que mon Home Assistant soit accessible depuis une URL en *https://...*.
+Toutes les étapes sont expliquées dans mon tuto [Installation du protocole HTTPS](docs/install-https.md).
 
 ### Installation de Zigbee & du 1er capteur
 
@@ -72,7 +72,9 @@ De superbes courbes avec une variation de couleur en fonction des valeurs.
 
 ### Home Assistant dans Github
 
-Vous pouvez voir le détail de l'installation des sauvegardes de Home Assistant dans Github dans ce tuto [Home Assistant sur Github](docs/install-github.md)
+Suite à une réinstallation complète de mon Home Assistant, j'ai suivi les conseils avisés des "anciens" en sauvegardant ma configuration sur Github pour avoir une gestion des versions.
+
+Vous pouvez voir le détail de l'installation des sauvegardes et l'organisation de mes fichiers de configuration de Home Assistant dans Github dans ce tuto [Home Assistant sur Github](docs/install-github.md)
 
 ### Allumage plafonnier auto via capteurs de présence (En attente de livraison)
 
@@ -84,13 +86,19 @@ Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Récupé
 
 ### Installation de Grocy / HA Android
 
-### Pluviomètre
+### Pluviomètre (futur projet)
 
 [DIY Zigbee rain gauge](https://community.home-assistant.io/t/diy-zigbee-rain-gauge/255379)
 
-### Réseau d'Assistants vocaux
+### Réseau d'Assistants vocaux (futur projet)
 
 Vous pouvez voir le détail de l'intégration de ce projet sur ce tuto [Réseaux d'assistants vocaux](docs/integ-rhasspy.md).
+
+### Système Ambilight
+
+[AMBILIGHT et RASPBERRY PI](https://www.youtube.com/watch?v=eIfdLJi3Gvs)
+[DrZZZ Ambilight](https://www.youtube.com/watch?v=urOEHzbV48A)
+[Hyperion](https://www.home-assistant.io/integrations/hyperion/)
 
 ## Quelques Aides
 
