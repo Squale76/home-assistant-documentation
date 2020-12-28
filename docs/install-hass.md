@@ -240,7 +240,7 @@ sudo systemctl start docker
 Cette ligne de commande installe Home Assistant en version 64 bits.
 
 ```shell
-curl -sL "https://raw.githubusercontent.com/McFlyPartages/supervised-installer/master/installer.sh" >> hassio_install.sh
+curl -sL "https://raw.githubusercontent.com/home-assistant/supervised-installer/master/installer.sh" >> hassio_install.sh
 sudo bash hassio_install.sh
 ```
 
